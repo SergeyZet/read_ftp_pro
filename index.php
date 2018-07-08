@@ -347,14 +347,14 @@
         </div>
 
         <div class="index-footer__social">
-            <a href="#" class="index-footer__social-link index-footer__social-link--vk">
+            <a href="https://vk.com/readium" class="index-footer__social-link index-footer__social-link--vk" target="_blank">
                 <i class="fab fa-vk"></i>
                 Вконтакте
             </a>
-            <a href="#" class="index-footer__social-link index-footer__social-link--inst">
+            <a href="https://www.instagram.com/readium_pro" class="index-footer__social-link index-footer__social-link--inst" target="_blank">
                 <i class="fab fa-instagram"></i>
                 Вконтакте</a>
-            <a href="#" class="index-footer__social-link index-footer__social-link--youtube">
+            <a href="https://www.youtube.com/channel/UCrdxviKGUjclJFq8LaoS1WQ?view_as=subscriber" class="index-footer__social-link index-footer__social-link--youtube" target="_blank">
                 <i class="fab fa-youtube"></i>
                 Вконтакте
             </a>
