@@ -1,7 +1,8 @@
 <?php
-    require_once 'libBD.php';
+    require_once '../../../DB/SimpleSql/Tables/All/CreateRealize/Base/SimpleSQLClass.php';
 
-	//CreateTablesToBD();
+    $db = new MyDB();
+    //$db->connect();
    
    	$user['email'] = $_POST['email'];
    	$user['password'] = $_POST['password'];
