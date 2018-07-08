@@ -238,7 +238,7 @@ abcHintOk.addEventListener('click', function() {
 /*----------------------btnResult---------------------------------------------*/
 btnResult.addEventListener('click', function() {
     if (a==3) {
-        location.replace('https://sergeyzet.github.io/ufo/');
+        location.replace('https://sergeyzet.github.io/ufo/');//http://readium.pro/test_code/okean/
     } else {
         testResult.classList.add('hidden');
         startScreen.classList.remove('hidden');
