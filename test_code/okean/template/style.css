@@ -72,8 +72,10 @@
   font-size: 30px;
 }
 .test-block .test-read {
+  bottom: 20px;
   min-width: 370px;
   margin-right: 0;
+  position: relative;
 }
 .test-block .test-hint {
   margin-top: 40px;

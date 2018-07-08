@@ -35,7 +35,7 @@ require_once("template/header.php");
                 </div>
                 <div class="test-btn-block">
                     <button class="test-read test-read3 btn" onclick="wordcheck()" id="check">Далее</button>
-                    <button class="test-read test-hint3 btn">Подсказка</button>
+<!--                    <button class="test-read test-hint3 btn">Подсказка</button>-->
                 </div>
 
             </div>

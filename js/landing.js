@@ -1,40 +1,19 @@
 window.onload = function () {
-
-
-    // document.getElementById("status_login").onclick = function () {
-    //     if(document.getElementById("status_login").checked){
-    //         document.getElementById("status_login").checked = false;
-    //     }
-    // };
-
     document.getElementById("button_email").onclick = function () {
-        //console.log(document.getElementById("name_email").value);
         let name = document.getElementById("name_email").value;
         let phone = document.getElementById("phone_email").value;
         let email = document.getElementById("e-mail_email").value;
         let coment = document.getElementById("coment_email").value;
-        //console.log(name + " " + phone + " " + email + " " + coment);
         $.ajax({
             type: "POST",
             url: "main/server/endpoint/get_AJAX/emailto.php",
             data: {name: name, phone: phone,email:email,coment:coment}
         }).done(function (result) {
-            /*
-            if(result){
-                alert("Сообщение успешно отправленно!");
-            }
-            else {
-                alert("Ошибка  сообщение не отправленно отправленно!");
-            }
-            */
             alert("Сообщение успешно отправленно!");
-            //console.log(result);
         });
     };
 
     document.getElementById("button_register").onclick = function () {
-        let status = (document.getElementById("student").checked)?"student":"teacher";
-        console.log("work");
         let name = document.getElementById("user-name").value;
         let surname = document.getElementById("user-surname").value;
         let email = document.getElementById("e-mail_register").value;
@@ -48,7 +27,7 @@ window.onload = function () {
         $.ajax({
             type: "POST",
             url: "main/server/endpoint/get_AJAX/users/registration.php",
-            data: {status:status,name:name,surname:surname, email: email,password:password}
+            data: {name:name,surname:surname, email: email,password:password}
         }).done(function (result) {
 
         });
@@ -75,7 +54,6 @@ window.onload = function () {
         document.getElementById("overlay_register").classList.add("show");
         document.getElementById("modal-form_register").classList.add("show");
     };
-
     document.getElementById("close_login").onclick = function () {
         document.getElementById("overlay_login").classList.remove("show");
         document.getElementById("modal-form_login").classList.remove("show");
