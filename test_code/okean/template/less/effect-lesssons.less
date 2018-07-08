@@ -1,0 +1,157 @@
+.effect-lessons {
+	margin-top: 45px;
+	padding-bottom: 72px;
+	text-align: center;
+	&__title {
+		.title();
+		margin: 0;
+		padding: 0;
+		color: @c-blue;
+	}
+	&__items {
+		margin-top: 55px;
+		padding-top: 1px;
+	}
+	&__item {
+		width: 470px;
+		padding-top: 240px;
+		margin-bottom: 45px;
+		color: #ffffff;
+		&:nth-child(odd) {
+			float: right;
+		}
+		&:nth-child(event) {
+			float: left;
+		}
+	}
+	&__item-wrap {
+		position: relative;
+		max-width: 360px;
+		padding-left: 20px;
+		background-color: @c-pur;
+		border-radius: 35px;
+	}
+	&__item-wrap--read,
+	&__item-wrap--mem {
+		max-width: 344px;
+	}
+	&__item-wrap::after {
+		content: "";
+		position: absolute;
+		display: block;
+	}
+
+	&__item-wrap--atten::after {
+		bottom: -9px;
+		left: -110px;
+		width: 173px;
+		height: 315px;
+		background-image: url(img/eff-boy-1.png);
+		background-repeat: no-repeat;
+	}
+	&__item-wrap--atten::before {
+		content: "x10";
+		position: absolute;
+		top: -192px;
+		right: 3px;
+		display: block;
+		color: @c-blue;
+		font-family: @font-family-900;
+		font-size: 185px;
+	}
+	&__item-wrap--art::after {
+		bottom: -9px;
+		left: -110px;
+		width: 174px;
+		height: 237px;
+		background-image: url(img/eff-boy-3.png);
+		background-repeat: no-repeat;
+	}
+	&__item-wrap--art::before {
+		content: "+50%";
+		position: absolute;
+		top: -104px;
+		right: 35px;
+		display: block;
+		color: @c-pur;
+		font-family: @font-family-900;
+		font-size: 100px;
+	}
+	&__item-wrap--read::after {
+		bottom: -85px;
+		right: -105px;
+		width: 172px;
+		height: 302px;
+		background-image: url(img/eff-boy-2.png);
+		background-repeat: no-repeat;
+	}
+	&__item-wrap--read::before {
+		content: "x2";
+		position: absolute;
+		top: -192px;
+		right: 75px;
+		display: block;
+		color: @c-pur;
+		font-family: @font-family-900;
+		font-size: 185px;
+		
+	}
+	&__item-wrap--mem::after {
+		bottom: 0px;
+		right: -105px;
+		width: 172px;
+		height: 302px;
+		background-image: url(img/eff-boy-4.png);
+		background-repeat: no-repeat;
+	}
+	&__item-wrap--mem::before {
+		content: "+30%";
+		position: absolute;
+		top: -104px;
+		right: 65px;
+		display: block;
+		color: @c-blue;
+		font-family: @font-family-900;
+		font-size: 100px;
+		
+	}
+	&__item-wrap--atten,
+	&__item-wrap--mem {
+		background-color: @c-blue;
+	}
+	&__item-wrap--atten,
+	&__item-wrap--art {
+		margin-left: 110px;
+		padding-left: 55px;
+	}
+
+	&__item-content {
+		
+		font-size: 24px;
+		line-height: 28px;
+		width: 275px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		text-transform: uppercase;
+		text-align: center;
+		outline: none;
+		
+		
+	}
+	&__link {
+		.btn();
+		padding-left: 50px;
+		padding-right: 50px;
+		color: #ffffff;
+		background-color: @c-blue;
+		&:hover {
+			background-color: #9d2aff;
+			color: #fff;
+		}
+		&:active {
+			background-color: #6209ae;
+
+		}
+	}
+
+}

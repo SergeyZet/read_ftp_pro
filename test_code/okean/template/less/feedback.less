@@ -1,0 +1,111 @@
+.feedback {
+	max-height: 745px;
+	padding-top: 1px;
+	text-align: center;
+	background-image: url(img/block-form-bg.jpg);
+	background-repeat: no-repeat;
+	background-position:  center top;
+
+	&-title {
+		margin: 0;
+		padding: 0;
+		margin-top: 35px;
+		font-family: @font-family-900;
+		line-height: 42px;
+		text-transform: uppercase;
+		font-size: 36px;
+		line-height: 44px;
+		font-weight: 800;
+		color: #ffffff;
+	}
+	&-text {
+		margin: 0;
+		padding: 0;
+		font-family: @font-family-300;
+		font-size: 24px;
+		line-height: 30px;
+		color: #ffffff;
+	}
+	&-write-to {
+		margin-top: 60px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 36px;
+		max-width: 770px;
+		font-size: 0px;
+		textarea {
+			width: 750px;
+			max-height: 245px;
+			margin-top: 30px;
+			padding-top: 15px;
+			padding-left: 20px;
+			font-size: 18px;
+			font-weight: 400;
+			font-family: @font-family-300;
+			border-radius: 25px;
+			border: none;
+			outline: none;
+		}
+		&__sub {
+			margin-top: 45px;
+			box-shadow: 0 0 10px 2px #fffc00;
+			padding-left: 50px;
+			padding-right: 50px;
+			background-color: #fffc00;
+			display: inline-block;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			text-transform: uppercase;
+			font-size: 24px;
+			line-height: 30px;
+			font-weight: 400;
+			font-family: @font-family-900;
+			text-decoration: none;
+			cursor: pointer;
+			outline: none;
+			border-radius: 35px;
+			vertical-align: top;
+			color: #9d2aff;
+			border: none;
+			&:hover {
+				background-color: #9d2aff;
+				box-shadow: 0 0 10px 2px #9d2aff;
+				color: @c-yell;
+			}
+			&:active {
+				background-color: #6209ae;
+				box-shadow: 0 0 10px 2px #6209ae;
+				color: @c-yell;
+			}
+		}
+		&__user {
+			display: inline-block;
+			font-size: 18px;
+			&:first-child {
+				margin-right: 25px;
+			}
+			input {
+				padding-left: 20px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				width: 350px;
+				font-weight: 400;
+				font-family: @font-family-300;
+				border: none;
+				border-radius: 35px;
+				background-color: #ffffff;
+				outline: none;
+			}
+			&--email {
+				input {
+					margin-top: 35px;
+					width: 750px;
+				}
+			}
+		}
+	}
+	input[placeholder],
+	textarea[placeholder] {
+		font-size: 18px;
+	}
+}

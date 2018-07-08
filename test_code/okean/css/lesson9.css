@@ -1,0 +1,31 @@
+body {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+}
+
+.generateNumber {
+    margin: 0 auto;
+    width: 700px;
+    float: left;
+}
+
+.number, .numb {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.numbers {
+    margin: 0 auto;
+    width: 700px;
+}
+.but{
+    width: 700px;
+    float: left;
+}

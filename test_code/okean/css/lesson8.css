@@ -1,0 +1,135 @@
+* {
+    margin: auto;
+    padding: 0px;
+}
+
+li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.all_content, .block2 {
+    width: 1000px;
+}
+
+.window {
+    width: 730px;
+    border: 10px #B1CFEB double;
+    border-radius: 10px;
+    position: relative;
+    float: left;
+}
+
+.menuHelp {
+    width: 730px;
+}
+
+.help {
+    margin-top: 30px;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 2px solid #DAC7BB;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.head {
+    width: 30%;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    border: 2px solid #B1CFEB;
+    text-align: center;
+    left: 35%;
+    top: -25px;
+    background: white;
+}
+
+.table_phone td, .line {
+    width: 77px;
+    height: 77px;
+}
+
+.lineHorizontal {
+    position: relative;
+    top: 35px;
+    height: 7px;
+    background: black;
+    opacity: 0.2;
+}
+
+.lineVertical {
+    position: relative;
+    top: 35px;
+    height: 7px;
+    background: black;
+    transform: rotate(90deg);
+    opacity: 0.2;
+}
+
+.info {
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+
+.button {
+    width: 220px;
+    height: 40px;
+    border: 2px solid #DAC7BB;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/*//////////////////////////////////////*/
+.account {
+    width: 230px;
+    position: relative;
+    float: right;
+    margin-left: 10px;
+    background: #B1CFEB;
+    border-radius: 15px;
+}
+
+.foto_block {
+    width: 230px;
+    height: 200px;
+
+}
+
+.foto_block1 {
+    margin: 20px 0px 0px 30px;
+    width: 130px;
+    height: 130px;
+    border-radius: 150px;
+    background: #5A9BCD;
+}
+
+.foto_block1_1 {
+    margin-top: 10px;
+    width: 110px;
+    height: 110px;
+    border-radius: 100px;
+    background: #E0F6FF;
+    position: relative;
+    top: 10px;
+}
+
+.foto_block2 {
+    height: 40px;
+    line-height: 40px;
+    padding: 30px;
+}
+
+.menu {
+    width: 230px;
+}
+
+.account_menu {
+    margin: 15px;
+}

@@ -1,0 +1,64 @@
+.modal-hint {
+	display: none;
+	position: fixed;
+	width: 770px;
+	min-height: 500px;
+	padding-bottom: 45px;
+	top: 10%;
+	left: 33%;
+	background-color: #ffffff;
+	border-radius: 13px;
+	box-shadow: 0 0 7px #292929;
+	z-index: 99;
+	&__header {
+		position: relative;
+		background-image: url(img/bg-hint.png);
+		background-repeat: no-repeat;
+	}
+	&__header-title {
+		margin: 0;
+		padding: 0;
+		padding-top: 20px;
+		padding-bottom: 35px;
+		font-family: 	@font-family-900;
+		font-size: @font-24*2;
+		color: #ffffff;
+		text-align: center;
+		text-shadow: 3px 3px @c-pur;
+	}
+	img {
+		position: absolute;
+		bottom: -30px;
+		right:325px;
+	}
+}
+.hint-list {
+	width: 650px;
+	margin-top: 45px;
+	margin-left: auto;
+	margin-right: auto;
+	list-style-type: none;
+	&__item {
+		margin-bottom: 35px;
+		font-family: @font-family-300;
+		font-size: @font-24;
+	}
+}
+.hint-btn {
+	margin-top: 40px;
+	.btn();
+	margin-left: 36%;
+	padding-left: 45px;
+	padding-right: 45px;
+	font-weight: bold;
+	color: #fff;
+	border: none;
+	background-color: @c-blue;
+	&:hover {
+		background-color: #9d2aff;
+		color: #fff;
+	}
+	&:active {
+		background-color: #6209ae;
+	}
+}
