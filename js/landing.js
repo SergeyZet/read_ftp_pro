@@ -7,31 +7,35 @@ window.onload = function () {
         $.ajax({
             type: "POST",
             url: "main/server/endpoint/get_AJAX/emailto.php",
-            data: {name: name, phone: phone,email:email,coment:coment}
+            data: {name: name, phone: phone, email: email, coment: coment}
         }).done(function (result) {
             alert("Сообщение успешно отправленно!");
         });
     };
 
     document.getElementById("button_register").onclick = function () {
-        let name = document.getElementById("user-name").value;
-        let surname = document.getElementById("user-surname").value;
-        let email = document.getElementById("e-mail_register").value;
-        let password = document.getElementById("password").value;
-        let password2 = document.getElementById("password2").value;
-        if(password!==password2){
-            alert("Пароли не совпдают");
-            console.log("Пароли не совпдают");
-        }
-        console.log("name = " + name + " surname = " +surname +" email = " + email  + "password = " + password);
+        let data = {};
+        data.status = (document.getElementById("student").checked) ? "student" : "teacher";
+        data.name = document.getElementById("user-name").value;
+        data.surname = document.getElementById("user-surname").value;
+        data.email = document.getElementById("e-mail_register").value;
+        data.password = document.getElementById("password").value;
+        data.password2 = document.getElementById("password2").value;
+        // if (password !== password2) {
+        //     alert("Пароли не совпдают");
+        //     console.log("Пароли не совпдают");
+        // }
+        console.log(data.json);
+        console.log(data);
+        //console.log("name = " + name + " surname = " + surname + " email = " + email + "password = " + password);
         $.ajax({
             type: "POST",
             url: "main/server/endpoint/get_AJAX/users/registration.php",
-            data: {name:name,surname:surname, email: email,password:password}
+            data: {json: JSON.stringify(data)},
         }).done(function (result) {
-
+            console.log(result);
         });
-        console.log("name = " + name + " surname = " +surname +" email = " + email  + "password = " + password);
+
     };
 
     document.getElementById("login").onclick = function () {
@@ -40,7 +44,7 @@ window.onload = function () {
         $.ajax({
             type: "POST",
             //url: "main/server/endpoint/get_AJAX/users/registration.php",
-            data: {login:login,password:password}
+            data: {login: login, password: password}
         }).done(function (result) {
 
         });
