@@ -39,14 +39,15 @@ window.onload = function () {
     };
 
     document.getElementById("login").onclick = function () {
-        let login = document.getElementById("e-mail_login").value;
-        let password = document.getElementById("password_login").value;
+        let data = {};
+        data.login = document.getElementById("e-mail_login").value;
+        data.password = document.getElementById("password_login").value;
         $.ajax({
             type: "POST",
-            //url: "main/server/endpoint/get_AJAX/users/registration.php",
-            data: {login: login, password: password}
+            url: "main/server/endpoint/get_AJAX/users/login.php",
+            data: {json: JSON.stringify(data)},
         }).done(function (result) {
-
+            console.log(result);
         });
     };
 
