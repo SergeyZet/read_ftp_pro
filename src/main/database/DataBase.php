@@ -1,8 +1,8 @@
 <?php
 class DataBase {
-    private $login = 'm3wsmap9_db'; // ВАШ ЛОГИН К БАЗЕ ДАННЫХ
-    private $pass = '*zTlB3kV'; // ВАШ ПАРОЛЬ К БАЗЕ ДАННЫХ
-    private $db_name = 'm3wsmap9_db'; // НАЗВАНИЕ БАЗЫ ДЛЯ САЙТА
+    private $login = 'm3wsmap9_db_i'; // ВАШ ЛОГИН К БАЗЕ ДАННЫХ
+    private $pass = 'C7Ao*n&Y'; // ВАШ ПАРОЛЬ К БАЗЕ ДАННЫХ
+    private $db_name = 'm3wsmap9_db_i'; // НАЗВАНИЕ БАЗЫ ДЛЯ САЙТА
     private $host='localhost';
     private $db;
 
