@@ -1,5 +1,7 @@
 <?php
-require_once 'BasePoint.php';
+//echo "proba1";
+include 'BasePoint.php';
+//echo "proba2";
 
 
 class TableProba

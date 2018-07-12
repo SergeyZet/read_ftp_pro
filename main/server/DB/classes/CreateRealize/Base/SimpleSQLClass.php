@@ -1,5 +1,6 @@
 ﻿<?php //defined('INDEX') OR die('Прямой доступ к странице запрещён!');
 
+	echo "simple";
 // MYSQL
 class MyDB 
 {
@@ -77,3 +78,4 @@ class MyDB
 		mysqli_close($this->link);
 	}
 }
+?>
