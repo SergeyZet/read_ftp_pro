@@ -1,6 +1,7 @@
 <?php
 echo "proba1";
-require_once '../Base/OneClickSQLClass2.php';
+require_once '..//CreateRealize//Base//OneClickMyDB.php';
+
 echo "proba2";
 
 
@@ -13,26 +14,29 @@ class TableProba
     function __construct($openConnect = 0, $db = false){
         $this->NameTable = 'Table_Proba';
         $this->openConnect = $openConnect;
-
+        echo "www";
         if ($db === false){
             if($this->openConnect === 0)
-                $this->db = new One($openConnect);//OneClickMyDB
+                $this->db = new OneClickMyDB($openConnect);
         } else {
-            $this->db = new One($openConnect,$db);
+            echo "www";
+            //$this->db = new OneClickMyDB($openConnect,$db);
         }
     }
     function connect(){
         if ($this->openConnect === 1) {
-            $this->db = new One($this->openConnect);
+            //$this->db = new OneClickMyDB($this->openConnect);
         }
     }
     function close(){
         if ($this->openConnect === 1) {
-            unset($this->db);
+            //unset($this->db);
         }
     }
 
-    
+    /*
+        Редактировать колонки
+    */
     function create(){
         $this->connect();
 
@@ -41,15 +45,15 @@ class TableProba
             array  ( 'name' => 'name', 'type' => 14110, 'length' => 100, 'ref' => 0),
         );
 
-        $flag = $this->db->create($this->NameTable,$Cols);
+        //$flag = $this->db->create($this->NameTable,$Cols);
         $this->close();
         return $flag;
-        
-        //    $flag === 0 :	echo "Создание таблицы (".$NameTable.") прошло успешно";
-        //    $flag === 1 :	echo "Таблица(".$NameTable.") уже существует";
+        /*
+            $flag === 0 :	echo "Создание таблицы (".$NameTable.") прошло успешно";
+            $flag === 1 :	echo "Таблица(".$NameTable.") уже существует";
 
-        //   else echo $flag;
-        
+            else echo $flag;
+        */
     }
 
 
@@ -63,12 +67,12 @@ class TableProba
         $flag = $this->db->deleteTable($this->NameTable);
         $this->close();
         return $flag;
-        
-        //            $flag === 0 :	echo "Удалеение таблицы (".$NameTable.") прошло успешно";
-        //    $flag === 1 :	echo "Таблица(".$NameTable.") не существует";
+        /*
+            $flag === 0 :	echo "Удалеение таблицы (".$NameTable.") прошло успешно";
+            $flag === 1 :	echo "Таблица(".$NameTable.") не существует";
 
-        //    else echo $flag;
-        
+            else echo $flag;
+        */
     }
 }
 ?>

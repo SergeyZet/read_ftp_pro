@@ -7,6 +7,8 @@
 		var $db;
 		function  __construct($openConnect = 0, $dataBase = false){
             $this->openConnect = $openConnect;
+        	echo "SSS";
+        
         	if ($this->openConnect === 1) {
         		$this->db = new MyDB();
         		$this->db->connect();
@@ -14,7 +16,7 @@
         	if ($this->openConnect === 2) {
         		$this->db = $dataBase;
         	}
-        }
+        }/*
 
 		function screening($data) {
 			$this->connect();
@@ -197,12 +199,12 @@
 
 			return $flag;
 		}
-		
+		*/
 		/*
 			Особые случаи пробрасываются выше
 			проверка типизации должна быть выше
 			если записи с таким значением нет, то ничего непроисходит, можнос сделать чтоб 2 возвращалось		
-		*/
+		*//*
 		function updateString($NameTable, $Cols_Values, $ColName, $ColValue){
 			$this->connect();
 			$NameTableSheilded = $this->db->screening($NameTable);
@@ -239,6 +241,7 @@
 			Особые случаи пробрасываются выше
 			проверка типизации должна быть выше
 		*/
+			/*
 		function setString($NameTable, $Cols_Values){
 			$this->connect();
 			$NameTableSheilded = $this->db->screening($NameTable);    
@@ -321,6 +324,7 @@
 			Особые случаи пробрасываются выше
 			проверка типизации должна быть выше
 		*/
+			/*
 		function getDataByCriterion($NameTable, &$targetCols, $criterionCols = false, $order = false){
 			$this->connect();
 			$NameTableSheilded = $this->db->screening($NameTable);
@@ -409,7 +413,7 @@
 
 		/*
 			Приватная функция
-		*/	
+		*/	/*
 		function addUniqueKey($NameTable,$Cols) {
 			$this->connect();
 			
@@ -585,7 +589,7 @@
 
 		/*
 			Особые случаи пробрасываются выше
-		*/
+		*//*
 		function create($NameTable, $Cols) {
 			$this->connect();
 			
@@ -730,7 +734,7 @@
 		/*
 			Особые случаи пробрасываются выше
 			если записи с таким значением нет, то ничего непроисходит
-		*/
+		*//*
 		function deleteRecord($nameTable,$Col) {
 			$this->connect();
 			$NameTableSheilded = $this->db->screening($nameTable);
@@ -757,7 +761,7 @@
 
 		/*
 			Особые случаи пробрасываются выше
-		*/
+		*//*
 		function deleteTable($nameTable) {
 			$this->connect();
 			$NameTableSheilded = $this->db->screening($nameTable);
@@ -776,7 +780,7 @@
 			$this->privateClose(); 
         
 	        return $flag;
-		}
+		}*/
 
 	}
 

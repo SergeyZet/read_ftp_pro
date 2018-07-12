@@ -4,7 +4,8 @@
  
     require_once '..//CreateRealize//Base//SimpleSQLClass.php';
  	echo "00";
-    require_once '..//CreateRealize//examples//TableProba.php'; //ругается
+    //require_once '..//CreateRealize//examples//TableProba.php'; //ругается
+ 	require_once '..//CreateRealize//examples//TableProba.php';
 /*	
 	function includeFiles($dir){
         $dh  = opendir('..//classes//CreateRealize//$dir');
@@ -16,7 +17,7 @@
     }
     includeFiles('examples');
 */
-    echo "12";
+    echo "1";
     $db = new MyDB();
 	echo "2";
 	$db->connect();
