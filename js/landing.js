@@ -1,15 +1,19 @@
 window.onload = function () {
     document.getElementById("button_email").onclick = function () {
-        let name = document.getElementById("name_email").value;
-        let phone = document.getElementById("phone_email").value;
-        let email = document.getElementById("e-mail_email").value;
-        let coment = document.getElementById("coment_email").value;
+        let data = {};
+        data.name = document.getElementById("name_email").value;
+        data.phone = document.getElementById("phone_email").value;
+        data.email = document.getElementById("e-mail_email").value;
+        data.coment = document.getElementById("coment_email").value;
+        //console.log(data);
         $.ajax({
             type: "POST",
-            url: "main/server/endpoint/get_AJAX/emailto.php",
-            data: {name: name, phone: phone, email: email, coment: coment}
+            //url: "main/server/endpoint/get_AJAX/email.php",
+            url: "src/main/ajax/email.php",
+            data:  {json: JSON.stringify(data)},
         }).done(function (result) {
             alert("Сообщение успешно отправленно!");
+            console.log(result);
         });
     };
 
@@ -30,7 +34,8 @@ window.onload = function () {
         //console.log("name = " + name + " surname = " + surname + " email = " + email + "password = " + password);
         $.ajax({
             type: "POST",
-            url: "main/server/endpoint/get_AJAX/users/registration.php",
+            //url: "main/server/endpoint/get_AJAX/users/registration.php",
+            url: "src/main/ajax/user/registration.php",
             data: {json: JSON.stringify(data)},
         }).done(function (result) {
             console.log(result);
@@ -44,7 +49,8 @@ window.onload = function () {
         data.password = document.getElementById("password_login").value;
         $.ajax({
             type: "POST",
-            url: "main/server/endpoint/get_AJAX/users/login.php",
+            //url: "main/server/endpoint/get_AJAX/users/login.php",
+            url: "src/main/ajax/user/login.php",
             data: {json: JSON.stringify(data)},
         }).done(function (result) {
             console.log(result);

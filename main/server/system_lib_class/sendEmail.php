@@ -1,4 +1,5 @@
 <?php
+require_once ('../DB/classes/CreateRealize/Base/SimpleSQLClass.php');
 	class SenderEmails
 	{
 		private $email;
@@ -6,7 +7,7 @@
 
 		function __construct($name, $phone, $email, $massege)
 		{
-			$this->email['to_email'] = "shaman1861@mail.ru";//$parametrEmail['to_email'];upgreat@55.ru
+			$this->email['to_email'] = "shaman1861@mail.ru,readium.pro@gmail.com ";//$parametrEmail['to_email'];upgreat@55.ru
 			$this->email['header'] = 'Readium.pro: "Тест-проверка связи ау"';
 			$this->email['message'] = $massege;
 			$this->email['additional_params'] = "From: name $name; phone $phone; email $email; \r\n";
