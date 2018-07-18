@@ -1,10 +1,11 @@
 window.onload = function () {
-    document.getElementById("button_email").onclick = function () {
+    document.getElementById("button-email").onclick = function (e) {
+        e.preventDefault();
         let data = {};
-        data.name = document.getElementById("name_email").value;
-        data.phone = document.getElementById("phone_email").value;
-        data.email = document.getElementById("e-mail_email").value;
-        data.coment = document.getElementById("coment_email").value;
+        data.name = document.getElementById("name-email").value;
+        data.phone = document.getElementById("phone-email").value;
+        data.email = document.getElementById("e-mail-email").value;
+        data.coment = document.getElementById("coment-email").value;
         //console.log(data);
         $.ajax({
             type: "POST",
@@ -17,14 +18,15 @@ window.onload = function () {
         });
     };
 
-    document.getElementById("button_register").onclick = function () {
+    document.getElementById("button-register").onclick = function () {
+        e.preventDefault();
         let data = {};
-        data.status = (document.getElementById("student").checked) ? "student" : "teacher";
+        //data.status = (document.getElementById("student").checked) ? "student" : "teacher";
         data.name = document.getElementById("user-name").value;
         data.surname = document.getElementById("user-surname").value;
-        data.email = document.getElementById("e-mail_register").value;
-        data.password = document.getElementById("password").value;
-        data.password2 = document.getElementById("password2").value;
+        data.email = document.getElementById("user-e-mail").value;
+        data.password = document.getElementById("user-password").value;
+        data.password2 = document.getElementById("user-password2").value;
         // if (password !== password2) {
         //     alert("Пароли не совпдают");
         //     console.log("Пароли не совпдают");
@@ -44,9 +46,10 @@ window.onload = function () {
     };
 
     document.getElementById("login").onclick = function () {
+        e.preventDefault();
         let data = {};
-        data.login = document.getElementById("e-mail_login").value;
-        data.password = document.getElementById("password_login").value;
+        data.login = document.getElementById("e-mail-login").value;
+        data.password = document.getElementById("password-login").value;
         $.ajax({
             type: "POST",
             //url: "main/server/endpoint/get_AJAX/users/login.php",
@@ -57,20 +60,22 @@ window.onload = function () {
         });
     };
 
-    document.getElementById("close_register").onclick = function () {
-        document.getElementById("overlay_register").classList.remove("show");
-        document.getElementById("modal-form_register").classList.remove("show");
+    document.getElementById("close-register").onclick = function () {
+        document.getElementById("overlay").classList.remove("show");
+        document.getElementById("registration-form").classList.remove("show");
     };
-    document.getElementById("user_register").onclick = function () {
-        document.getElementById("overlay_register").classList.add("show");
-        document.getElementById("modal-form_register").classList.add("show");
+    document.getElementById("user-register").onclick = function (e) {
+        e.preventDefault();
+        document.getElementById("overlay").classList.add("show");
+        document.getElementById("registration-form").classList.add("show");
     };
-    document.getElementById("close_login").onclick = function () {
-        document.getElementById("overlay_login").classList.remove("show");
-        document.getElementById("modal-form_login").classList.remove("show");
+    document.getElementById("close-login").onclick = function () {
+        document.getElementById("overlay").classList.remove("show");
+        document.getElementById("login-form").classList.remove("show");
     };
-    document.getElementById("user_login").onclick = function () {
-        document.getElementById("overlay_login").classList.add("show");
-        document.getElementById("modal-form_login").classList.add("show");
+    document.getElementById("user-login").onclick = function (e) {
+        e.preventDefault();
+        document.getElementById("overlay").classList.add("show");
+        document.getElementById("login-form").classList.add("show");
     };
 };
